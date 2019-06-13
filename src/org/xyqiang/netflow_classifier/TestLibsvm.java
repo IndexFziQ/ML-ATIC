@@ -18,25 +18,25 @@ public class TestLibsvm {
 
        
         File inputFile = new File(
-               "F:/KDDCUP1999/Train.arff");// ÑµÁ·ÓïÁÏÎÄ¼ş
+               "./data/TrainAndTest/Train.arff");// è®­ç»ƒè¯­æ–™æ–‡ä»¶
         ArffLoader atf = new ArffLoader();
         atf.setFile(inputFile);
-        Instances instancesTrain = atf.getDataSet(); // ¶ÁÈëÑµÁ·ÎÄ¼ş
+        Instances instancesTrain = atf.getDataSet(); // è¯»å…¥è®­ç»ƒæ–‡ä»¶
        
         inputFile = new File(
-               "F:/KDDCUP1999/Test.arff");// ²âÊÔÓïÁÏÎÄ¼ş
+               "./data/TrainAndTest/Test.arff");// æµ‹è¯•è¯­æ–™æ–‡ä»¶
         atf.setFile(inputFile);
-        Instances instancesTest = atf.getDataSet(); // ¶ÁÈë²âÊÔÎÄ¼ş
+        Instances instancesTest = atf.getDataSet(); // è¯»å…¥æµ‹è¯•æ–‡ä»¶
 
        
         instancesTest.setClassIndex(instancesTest.numAttributes() - 1);
         instancesTrain.setClassIndex(instancesTrain.numAttributes() - 1);
 
        
-       // ÆÓËØ±´Ò¶Ë¹Ëã·¨
+       // æœ´ç´ è´å¶æ–¯ç®—æ³•
         classifier1 = (Classifier) Class.forName(
                "weka.classifiers.bayes.NaiveBayes").newInstance();
-        // ¾ö²ßÊ÷
+        // å†³ç­–æ ‘
         classifier2 = (Classifier) Class.forName(
                "weka.classifiers.trees.J48").newInstance();
         // Zero
@@ -50,27 +50,27 @@ public class TestLibsvm {
         classifier2.buildClassifier(instancesTrain);
         classifier3.buildClassifier(instancesTrain);
         
-        SerializationHelper.write("F:/KDDCUP1999/NaiveBayes.model", classifier1);
-        SerializationHelper.write("F:/KDDCUP1999/J48_test.model", classifier2);
-        SerializationHelper.write("F:/KDDCUP1999/ZeroR.model", classifier3);     
+        SerializationHelper.write("./data/Model/NaiveBayes.model", classifier1);
+        SerializationHelper.write("./data/Model/J48_test.model", classifier2);
+        SerializationHelper.write("./data/Model/ZeroR.model", classifier3);     
        
         
 //        Evaluation eval = new Evaluation(instancesTrain);
 //       
 ////        eval.evaluateModel(classifier4, instancesTest);
-////      	System.out.println("LibSVMËã·¨ÆÀ¹À½á¹û"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
+////      	System.out.println("LibSVMç®—æ³•è¯„ä¼°ç»“æœ"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
 //        eval.evaluateModel(classifier1, instancesTest);
-//        System.out.println("ÆÓËØ±´Ò¶Ë¹Ëã·¨ÆÀ¹À½á¹û"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
+//        System.out.println("æœ´ç´ è´å¶æ–¯ç®—æ³•è¯„ä¼°ç»“æœ"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
 //        eval.evaluateModel(classifier2, instancesTest);
-//        System.out.println("¾ö²ßÊ÷Ëã·¨ÆÀ¹À½á¹û"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
+//        System.out.println("å†³ç­–æ ‘ç®—æ³•è¯„ä¼°ç»“æœ"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
 //        eval.evaluateModel(classifier3, instancesTest);
-//        System.out.println("ZeroËã·¨ÆÀ¹À½á¹û"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
+//        System.out.println("Zeroç®—æ³•è¯„ä¼°ç»“æœ"+"\n"+eval.toSummaryString()+"\n"+eval.toClassDetailsString());
        
 
 
     }
 
-/*Èç¹ûÖ»ÓĞÑµÁ·¼¯£¬²ÉÓÃÊ®½»²æÑéÖ¤µÄ·½·¨£¬½«ÉÏÃæµÄµÚ5²½ºÍµÚ6²½¸ü¸ÄÎªÈçÏÂ´úÂë£º
+/*å¦‚æœåªæœ‰è®­ç»ƒé›†ï¼Œé‡‡ç”¨åäº¤å‰éªŒè¯çš„æ–¹æ³•ï¼Œå°†ä¸Šé¢çš„ç¬¬5æ­¥å’Œç¬¬6æ­¥æ›´æ”¹ä¸ºå¦‚ä¸‹ä»£ç ï¼š
        
         Evaluation eval = new Evaluation(instancesTrain);
         eval.crossValidateModel(classifier4, instancesTrain, 10, new Random(1));
@@ -81,7 +81,7 @@ public class TestLibsvm {
         System.out.println(eval.errorRate());
         eval.crossValidateModel(classifier3, instancesTrain, 10, new Random(1));
         System.out.println(eval.errorRate());
-Èç¹ûĞèÒª±£´æºÍ¼ÓÔØ·ÖÀàÆ÷Ä£ĞÍ²ÎÊı£¬ÔÚµÚ5²½ºÍµÚ6²½Ö®¼ä¼ÓÈëÈçÏÂ´úÂë£º
+å¦‚æœéœ€è¦ä¿å­˜å’ŒåŠ è½½åˆ†ç±»å™¨æ¨¡å‹å‚æ•°ï¼Œåœ¨ç¬¬5æ­¥å’Œç¬¬6æ­¥ä¹‹é—´åŠ å…¥å¦‚ä¸‹ä»£ç ï¼š
        
         SerializationHelper.write("LibSVM.model", classifier4);
        
