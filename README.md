@@ -20,6 +20,7 @@ Abnormal Traffic Identification Classifier based on machine learning methods. My
 
 1. Unzip TrainAndTest.zip and Model.zip in data file. Train.arff and Test.arff had been preprocessed by adding the head for raw data. If interested, you can open it and then explore.
 2. There are some character encoding problems in java files which are UTF-8 and GB18030. And it may lead some mistakes in annotations.
+3. Model contains some trained model which can be used directly. You can also train model by yourself by running BuildTree.java, TestBP.java and TestLibsvm.java.
 3. Run MainContainer.java. It is a demo UI used for show the prediction.
 4. Note that test.txt is some examples from kddcup.newtestdata_10_percent_unlabeled.gz. 
 
