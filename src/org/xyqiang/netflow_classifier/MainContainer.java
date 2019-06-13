@@ -1,6 +1,6 @@
 package org.xyqiang.netflow_classifier;
 /*
- * ½çÃæ
+ * Demoç•Œé¢ï¼Œä½¿ç”¨C4.5å†³ç­–æ ‘é¢„æµ‹å¼‚å¸¸æµé‡
  * */
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -60,11 +60,11 @@ public class MainContainer extends JFrame{
 		contentPane.setLayout(null);
 		
 		JLabel label = new JLabel("\u5F02\u5E38\u6D41\u91CF\u8BC6\u522B\u7CFB\u7EDF");
-		label.setFont(new Font("·½ÕıËÕĞÂÊ«Áø¿¬¼òÌå", Font.PLAIN, 26));
+		label.setFont(new Font("æ¥·ä½“", Font.PLAIN, 26));
 		label.setBounds(69, 10, 217, 46);
 		contentPane.add(label);
 		
-		JLabel lblCumtcsxyqiang = new JLabel("CUMTCS.xyqiang");
+		JLabel lblCumtcsxyqiang = new JLabel("IndexFziQ");
 		lblCumtcsxyqiang.setFont(new Font("Candara", Font.PLAIN, 14));
 		lblCumtcsxyqiang.setBounds(296, 30, 105, 18);
 		contentPane.add(lblCumtcsxyqiang);
@@ -74,8 +74,8 @@ public class MainContainer extends JFrame{
 		contentPane.add(scrollPane);
 		
 		textArea_0 = new JTextArea();
-		textArea_0.setFont(new Font("¿¬Ìå", Font.PLAIN, 13));
-		String str0="¾ö²ßÊ÷Ä£ĞÍ";		
+		textArea_0.setFont(new Font("æ¥·ä½“", Font.PLAIN, 13));
+		String str0="å†³ç­–æ ‘æ¨¡å‹";		
 		textArea_0.setText(str0);
 		scrollPane.setViewportView(textArea_0);
 		
@@ -84,8 +84,8 @@ public class MainContainer extends JFrame{
 		contentPane.add(scrollPane_1);
 		
 		textArea_1 = new JTextArea();
-		textArea_1.setFont(new Font("¿¬Ìå", Font.PLAIN, 13));
-		String str1="Ô¤²âÖµ";		
+		textArea_1.setFont(new Font("æ¥·ä½“", Font.PLAIN, 13));
+		String str1="é¢„æµ‹å€¼";		
 		textArea_1.setText(str1);
 		scrollPane_1.setViewportView(textArea_1);
 		
@@ -94,8 +94,8 @@ public class MainContainer extends JFrame{
 		contentPane.add(scrollPane_2);
 		
 		textArea_2 = new JTextArea();
-		textArea_2.setFont(new Font("¿¬Ìå", Font.PLAIN, 13));
-		String str2="¾¯±¨";	
+		textArea_2.setFont(new Font("æ¥·ä½“", Font.PLAIN, 13));
+		String str2="è­¦æŠ¥";	
 		textArea_2.setText(str2);
 		scrollPane_2.setViewportView(textArea_2);
 		
@@ -159,126 +159,126 @@ public class MainContainer extends JFrame{
 					String[] tmp = str5.split("\n");
 					
 					for(int i=1; i<tmp.length; i++){
-						textArea_2.append("\n"+"¸ÃÀàĞÍÎª£º"+tmp[i]);					
+						textArea_2.append("\n"+"è¯¥ç±»å‹ä¸ºï¼š"+tmp[i]);					
 						if(tmp[i].equals("teardrop.")){							
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªteardrop");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”teardrop");
 						}
 						else if(tmp[i].equals("back.")){							
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªback");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”back");
 						}
 						else if(tmp[i].equals("loadmodule.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªloadmodule");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”loadmodule");
 						}
 						else if(tmp[i].equals("neptune.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªneptune");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”neptune");
 						}
 						else if(tmp[i].equals("rootkit.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªrootkit");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”rootkit");
 						}
 						else if(tmp[i].equals("phf.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªphf");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”phf");
 						}
 						else if(tmp[i].equals("satan.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍPROBE¡ª¡ªsatan");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹PROBEâ€”â€”satan");
 						}
 						else if(tmp[i].equals("buffer_overflow.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªbuffer_overflow");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”buffer_overflow");
 						}
 						else if(tmp[i].equals("ftp_write.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªftp_write");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”ftp_write");
 						}
 						else if(tmp[i].equals("land.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªland");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”land");
 						}
 						else if(tmp[i].equals("spy.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªspy");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”spy");
 						}
 						else if(tmp[i].equals("ipsweep.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍPROBE¡ª¡ªipsweep");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹PROBEâ€”â€”ipsweep");
 						}
 						else if(tmp[i].equals("multihop.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªmultihop");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”multihop");
 						}
 						else if(tmp[i].equals("smurf.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªsmurf");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”smurf");
 						}
 						else if(tmp[i].equals("pod.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªpod");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”pod");
 						}
 						else if(tmp[i].equals("perl.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªperl");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”perl");
 						}
 						else if(tmp[i].equals("warezclient.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªwarezclient");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”warezclient");
 						}
 						else if(tmp[i].equals("nmap.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍPROBE¡ª¡ªnmap");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹PROBEâ€”â€”nmap");
 						}
 						else if(tmp[i].equals("imap.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªimap");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”imap");
 						}
 						else if(tmp[i].equals("warezmaster.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªwarezmaster");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”warezmaster");
 						}
 						else if(tmp[i].equals("portsweep.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍPROBE¡ª¡ªportsweep");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹PROBEâ€”â€”portsweep");
 						}
 						else if(tmp[i].equals("guess_passwd.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªguess_passwd");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”guess_passwd");
 						}
 						else if(tmp[i].equals("mscan.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍPROBE¡ª¡ªmscan");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹PROBEâ€”â€”mscan");
 						}
 						else if(tmp[i].equals("apache2.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªapache2");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”apache2");
 						}
 						else if(tmp[i].equals("mailbomb.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªmailbomb");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”mailbomb");
 						}
 						else if(tmp[i].equals("processtable.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªprocesstable");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”processtable");
 						}
 						else if(tmp[i].equals("udpstorm.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍDOS¡ª¡ªudpstorm");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹DOSâ€”â€”udpstorm");
 						}
 						else if(tmp[i].equals("httptunnel.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªhttptunnel");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”httptunnel");
 						}
 						else if(tmp[i].equals("ps.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªps");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”ps");
 						}
 						else if(tmp[i].equals("sqlattack.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªsqlattack");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”sqlattack");
 						}
 						else if(tmp[i].equals("xterm.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍU2R¡ª¡ªxterm");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹U2Râ€”â€”xterm");
 						}
 						else if(tmp[i].equals("named.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªnamed");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”named");
 						}
 						else if(tmp[i].equals("sendmail.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªsendmail");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”sendmail");
 						}
 						else if(tmp[i].equals("snmpgetattack.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªsnmpgetattack");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”snmpgetattack");
 						}
 						else if(tmp[i].equals("snmpguess.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªsnmpguess");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”snmpguess");
 						}
 						else if(tmp[i].equals("worm.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªworm");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”worm");
 						}
 						else if(tmp[i].equals("xlock.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªxlock");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”xlock");
 						}
 						else if(tmp[i].equals("xsnoop.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍR2L¡ª¡ªxsnoop");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹R2Lâ€”â€”xsnoop");
 						}
 						else if(tmp[i].equals("saint.")){
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÊôÓÚ¹¥»÷ÀàĞÍPROBE¡ª¡ªsaint");
+							textArea_2.append("\n"+"è¯¥æµé‡å±äºæ”»å‡»ç±»å‹PROBEâ€”â€”saint");
 						}
 						else{
-							textArea_2.append("\n"+"¸ÃÁ÷Á¿ÎªÕı³£Á÷Á¿¡ª¡ªnormal");
+							textArea_2.append("\n"+"è¯¥æµé‡ä¸ºæ­£å¸¸æµé‡â€”â€”normal");
 						}
 					}					
 				} catch (Exception e2) {					
@@ -292,7 +292,7 @@ public class MainContainer extends JFrame{
 			
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setFont(new Font("¿¬Ìå", Font.PLAIN, 12));
+		textPane.setFont(new Font("æ¥·ä½“", Font.PLAIN, 12));
 		textPane.setForeground(SystemColor.controlDkShadow);
 		textPane.setText("      \u7B80\u4ECB \r\n\u6A21\u62DF4\u5927\u7C7B\u7684\u7F51\r\n\u7EDC\u653B\u51FB\u65B9\u6CD5\uFF0C\u901A\r\n\u8FC7\u51B3\u7B56\u6811\u7B97\u6CD5\u5BF9\r\n\u6570\u636E\u8FDB\u884C\u9884\u6D4B\uFF0C\r\n\u5F97\u5230\u5F53\u524D\u6D41\u91CF\u7684\r\n\u9884\u6D4B\u503C\u3002      \r\n      \u529F\u80FD \r\n 1.\u8F93\u51FA\u51B3\u7B56\u6811\r\n 2.\u8F93\u51FA\u9884\u6D4B\u503C\r\n 3.\u8B66\u62A5\u548C\u63D0\u793A");
 		textPane.setBounds(650, 216, 93, 191);
