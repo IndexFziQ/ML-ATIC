@@ -1,6 +1,6 @@
 package org.xyqiang.netflow_classifier;
 /**
- * µÃ³ö»ùÓÚ›Q²ß˜äµÄ·ÖÀàÆ÷Ä£ĞÍ¿ÉÊÓ»¯Ğ§¹ûºÍÆÀ¹À½á¹û
+ * å¾—å‡ºåŸºäºæ±ºç­–æ¨¹çš„åˆ†ç±»å™¨æ¨¡å‹å¯è§†åŒ–æ•ˆæœå’Œè¯„ä¼°ç»“æœ
  * */
 import weka.classifiers.evaluation.Evaluation;
 import weka.classifiers.trees.J48;
@@ -9,25 +9,25 @@ import weka.core.converters.ConverterUtils.DataSource;
 
 public class MyEvaluation {
 		
-	/** ¶ÁÈ¡ÑµÁ·¼¯µÄ¶ÔÏó */	
+	/** è¯»å–è®­ç»ƒé›†çš„å¯¹è±¡ */	
 	private  Instances train;
 	
-	/** ¶ÁÈ¡²âÊÔ¼¯µÄ¶ÔÏó */	
+	/** è¯»å–æµ‹è¯•é›†çš„å¯¹è±¡ */	
 	private  Instances test;	
 	
-	/** Éú³ÉµÄ¾ö²ßÊ÷Ä£ĞÍ */	
+	/** ç”Ÿæˆçš„å†³ç­–æ ‘æ¨¡å‹ */	
 	private  J48 tree;
 	
-	/** ¾ö²ßÊ÷µÄ×Ö·û´®Êä³öÄ£ĞÍ  */	
+	/** å†³ç­–æ ‘çš„å­—ç¬¦ä¸²è¾“å‡ºæ¨¡å‹  */	
 	private  String trees;
 	
-	/** ÆÀ¹À½á¹ûµÄ×Ö·û´®Êä³ö */	
+	/** è¯„ä¼°ç»“æœçš„å­—ç¬¦ä¸²è¾“å‡º */	
 	private  String evaluateData;
 	
 	/**
-	 * ¾ö²ßÊ÷µÄ×Ö·û´®Êä³öÄ£ĞÍµÄ»ñÈ¡·½·¨
+	 * å†³ç­–æ ‘çš„å­—ç¬¦ä¸²è¾“å‡ºæ¨¡å‹çš„è·å–æ–¹æ³•
 	 * 
-	 * @return ÔËĞĞºóÉú³ÉµÄStringĞÍ¾ö²ßÊ÷Ä£ĞÍ
+	 * @return è¿è¡Œåç”Ÿæˆçš„Stringå‹å†³ç­–æ ‘æ¨¡å‹
 	 */		
 	public String getTrees() {
 		return trees;
@@ -38,9 +38,9 @@ public class MyEvaluation {
 	}
 	
 	/**
-	 * ÆÀ¹À½á¹ûµÄ×Ö·û´®Êä³öµÄ»ñÈ¡·½·¨
+	 * è¯„ä¼°ç»“æœçš„å­—ç¬¦ä¸²è¾“å‡ºçš„è·å–æ–¹æ³•
 	 * 
-	 * @return ÔËĞĞºóÉú³ÉµÄStringĞÍÆÀ¹À½á¹û
+	 * @return è¿è¡Œåç”Ÿæˆçš„Stringå‹è¯„ä¼°ç»“æœ
 	 */	
 	public String getEvaluateData() {
 		return evaluateData;
@@ -51,9 +51,9 @@ public class MyEvaluation {
 	}	
 	
 	/**
-	 * ÑµÁ·¼¯¶ÔÏóµÄ»ñÈ¡
+	 * è®­ç»ƒé›†å¯¹è±¡çš„è·å–
 	 * 
-	 * @return ¶ÁÈ¡µÄÑµÁ·¼¯£¬ÓÃÓÚ¾ö²ßÊ÷µÄÉú³É
+	 * @return è¯»å–çš„è®­ç»ƒé›†ï¼Œç”¨äºå†³ç­–æ ‘çš„ç”Ÿæˆ
 	 */	
 	public Instances getTrain() {
 		return train;
@@ -64,9 +64,9 @@ public class MyEvaluation {
 	}
 	
 	/**
-	 * ²âÊÔ¼¯¶ÔÏóµÄ»ñÈ¡
+	 * æµ‹è¯•é›†å¯¹è±¡çš„è·å–
 	 * 
-	 * @return ¶ÁÈ¡µÄ²âÊÔ¼¯£¬ÓÃÓÚÆÀ¹À½á¹ûµÄÉú³É
+	 * @return è¯»å–çš„æµ‹è¯•é›†ï¼Œç”¨äºè¯„ä¼°ç»“æœçš„ç”Ÿæˆ
 	 */	
 	public Instances getTest() {
 		return test;
@@ -77,9 +77,9 @@ public class MyEvaluation {
 	}
 	
 	/**
-	 * ¾ö²ßÊ÷Ä£ĞÍµÄ»ñÈ¡·½Ê½
+	 * å†³ç­–æ ‘æ¨¡å‹çš„è·å–æ–¹å¼
 	 * 
-	 * @return ÔËĞĞÉú³ÉµÄJ48Àà¶ÔÏó£¬´´½¨µÄ¾ö²ßÊ÷Ä£ĞÍ£¬¿ÉÓÃÓÚÔ¤²âºÍÆÀ¹À
+	 * @return è¿è¡Œç”Ÿæˆçš„J48ç±»å¯¹è±¡ï¼Œåˆ›å»ºçš„å†³ç­–æ ‘æ¨¡å‹ï¼Œå¯ç”¨äºé¢„æµ‹å’Œè¯„ä¼°
 	 */	
 	public J48 getTree() {
 		return tree;
@@ -90,58 +90,58 @@ public class MyEvaluation {
 	}
 			
 	/**
-	 * J48Àà´´½¨¾ö²ßÊ÷¶ÔÏó
-	 * ¾ö²ßÊ÷µÄÑ¡Ïî¼û´úÂëÖĞ×¢ÊÍ£¬¹Ø¼üÊÇbuildClassifier·½·¨
+	 * J48ç±»åˆ›å»ºå†³ç­–æ ‘å¯¹è±¡
+	 * å†³ç­–æ ‘çš„é€‰é¡¹è§ä»£ç ä¸­æ³¨é‡Šï¼Œå…³é”®æ˜¯buildClassifieræ–¹æ³•
 	 * 
-	 * @return ¾ö²ßÊ÷Ä£ĞÍ¡ª¡ªtree
+	 * @return å†³ç­–æ ‘æ¨¡å‹â€”â€”tree
 	 */	
 	public J48 model() throws Exception {						
-		// ÑµÁ·J48·ÖÀàÆ÷
+		// è®­ç»ƒJ48åˆ†ç±»å™¨
 		String[] options = new String[1];
-		options[0] = "-U"; 			// ²»ĞŞ¼ô
-		tree = new J48(); 			// J48·ÖÀàÆ÷¶ÔÏó
-		tree.setOptions(options);	// ÉèÖÃÑ¡Ïî
-		tree.buildClassifier(train);// ¹¹½¨·ÖÀàÆ÷	
+		options[0] = "-U"; 			// ä¸ä¿®å‰ª
+		tree = new J48(); 			// J48åˆ†ç±»å™¨å¯¹è±¡
+		tree.setOptions(options);	// è®¾ç½®é€‰é¡¹
+		tree.buildClassifier(train);	// æ„å»ºåˆ†ç±»å™¨	
 		return tree;
 	}
 	
 	/**
-	 * ¼ÓÔØÑµÁ·¼¯
+	 * åŠ è½½è®­ç»ƒé›†
 	 * 
-	 * @return ÑµÁ·¼¯¡ª¡ªtrain
+	 * @return è®­ç»ƒé›†â€”â€”train
 	 */	
 	public Instances TrainLoader() throws Exception {
-		train = DataSource.read("F:/KDDCUP1999/Train.arff");
+		train = DataSource.read("./data/TrainAndTest/Train.arff");
 		train.setClassIndex(train.numAttributes() - 1);
 		return train;
 	}
 	
 	/**
-	 * ¼ÓÔØÑµÁ·¼¯
+	 * åŠ è½½è®­ç»ƒé›†
 	 * 
-	 * @return ÑµÁ·¼¯¡ª¡ªtest
+	 * @return è®­ç»ƒé›†â€”â€”test
 	 */	
 	public Instances TestLoader() throws Exception {
-		test  = DataSource.read("F:/KDDCUP1999/Test.arff");
+		test  = DataSource.read("./data/TrainAndTest/Test.arff");
 		test.setClassIndex(test.numAttributes() - 1);
 		return test;
 	}
 	
 	/**
-	 * ÔÚ¾ö²ßÊ÷Éú³ÉÖ®ºó£¬ÒÔ×Ö·û´®µÄĞÎÊ½Õ¹ÏÖ³öÀ´
-	 * toString¾ÍÊÇ×ª»»³É×Ö·û´®µÄÒ»¸ö·½·¨£¬Ïàµ±ÓÚ¸øtrees¸³Öµ
+	 * åœ¨å†³ç­–æ ‘ç”Ÿæˆä¹‹åï¼Œä»¥å­—ç¬¦ä¸²çš„å½¢å¼å±•ç°å‡ºæ¥
+	 * toStringå°±æ˜¯è½¬æ¢æˆå­—ç¬¦ä¸²çš„ä¸€ä¸ªæ–¹æ³•ï¼Œç›¸å½“äºç»™treesèµ‹å€¼
 	 * 
-	 * @return ¾ö²ßÊ÷µÄ×Ö·û´®ĞÎÊ½¡ª¡ªtrees
+	 * @return å†³ç­–æ ‘çš„å­—ç¬¦ä¸²å½¢å¼â€”â€”trees
 	 */	
 	public void buildtree() throws Exception {
 		setTrees(tree.toString());
 	}
 	
 	/**
-	 * ¶Ô½¨Á¢ºÃµÄÄ£ĞÍ½øĞĞÆÀ¹À²âÊÔ
-	 * ¼ÓÔØºÃ²âÊÔ¼¯£¬Ôö¼ÓÊ¶±ğµÄÒ»°ãĞÔ
+	 * å¯¹å»ºç«‹å¥½çš„æ¨¡å‹è¿›è¡Œè¯„ä¼°æµ‹è¯•
+	 * åŠ è½½å¥½æµ‹è¯•é›†ï¼Œå¢åŠ è¯†åˆ«çš„ä¸€èˆ¬æ€§
 	 * 
-	 * @return ÆÀ¹À½á¹û¡ª¡ªevaluateData
+	 * @return è¯„ä¼°ç»“æœâ€”â€”evaluateData
 	 */	
 	public void evaluate() throws Exception {
 		Evaluation eval = new Evaluation(train);
@@ -151,7 +151,7 @@ public class MyEvaluation {
 	}
 	
 	/**
-	 * Ö÷º¯Êı£¬ÓÃÓÚ²âÊÔ
+	 * ä¸»å‡½æ•°ï¼Œç”¨äºæµ‹è¯•
 	 * 
 	 */	
 	public static void main(String[] args) throws Exception {
