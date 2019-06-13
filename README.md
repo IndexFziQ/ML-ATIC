@@ -1,2 +1,2 @@
-# ATIC
-Abnormal Traffic Identification Classifier. My code for undergraduate graduation design.
+# ML-ATIC
+Abnormal Traffic Identification Classifier based on machine learning methods. My code for undergraduate graduation design.
