@@ -35,7 +35,7 @@ public class MyPredict {
 	public void predict() throws Exception{	
 		predictdata=new Vector<String>();
 		
-		Instances train = DataSource.read("F:/KDDCUP1999/Train.arff");		
+		Instances train = DataSource.read("./data/TrainandTest/Train.arff");		
 		train.setClassIndex(train.numAttributes() - 1);
 		
 		Instances race = new Instances(train, 0);		
