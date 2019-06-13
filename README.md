@@ -1,5 +1,5 @@
 # ML-ATIC
-Abnormal Traffic Identification Classifier based on machine learning methods. My code for undergraduate graduation design.
+Abnormal Traffic Identification Classifier based on machine learning methods. My code for undergraduate graduation design. There would be many mistakes in codes. Also, it may have some inappropriate methods  in training model and evaluation. Welcome to find it out.
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Abnormal Traffic Identification Classifier based on machine learning methods. My
 1. Unzip TrainAndTest.zip and Model.zip in data file. Train.arff and Test.arff had been preprocessed by adding the head for raw data. If interested, you can open it and then explore.
 2. There are some character encoding problems in java files which are UTF-8 and GB18030. And it may lead some mistakes in annotations.
 3. Run MainContainer.java. It is a demo UI used for show the prediction.
-4. Tips: test.txt is some examples from kddcup.newtestdata_10_percent_unlabeled.gz.
+4. Note that test.txt is some examples from kddcup.newtestdata_10_percent_unlabeled.gz. 
 
 ## License
 
