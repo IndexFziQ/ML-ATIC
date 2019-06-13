@@ -10,9 +10,9 @@ public class TestBP {
 
 	public static void main(String[] args) throws Exception {
 
-		Instances train = DataSource.read("F:/KDDCUP1999/Train.arff");
+		Instances train = DataSource.read("./data/Model/Train.arff");
 		train.setClassIndex(train.numAttributes() - 1);
-		Instances test = DataSource.read("F:/KDDCUP1999/Test.arff");
+		Instances test = DataSource.read("./data/Model/Test.arff");
 		test.setClassIndex(test.numAttributes() - 1);
 
 		MultilayerPerceptron mp=new MultilayerPerceptron();
@@ -35,7 +35,7 @@ public class TestBP {
 		mp.setNominalToBinaryFilter(true);//¿ÉÒÔÌá¸ßÐÔÄÜ
 
 		mp.buildClassifier(train);
-		SerializationHelper.write("F:/KDDCUP1999/MultilayerPerceptron.model", mp);
+		SerializationHelper.write("./data/Model/MultilayerPerceptron.model", mp);
 
 		Evaluation eval=new Evaluation(train);
 		eval.evaluateModel(mp, test);

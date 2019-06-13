@@ -13,7 +13,7 @@ public class LoaderTree {
 	
 	public J48 loadTree() {
 		Serialization test=new Serialization();
-		J48 model=(J48) test.reloadPersistModel("F:/KDDCUP1999/test.model");
+		J48 model=(J48) test.reloadPersistModel("./data/Model/test.model");
 		return model;
 	}
 	

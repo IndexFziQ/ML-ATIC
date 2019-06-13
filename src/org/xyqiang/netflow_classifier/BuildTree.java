@@ -13,14 +13,14 @@ public class BuildTree {
 	}
 	public void buildTree() throws Exception {
 		Serialization test=new Serialization();		
-		Instances train = DataSource.read("F:/KDDCUP1999/Train.arff");		
+		Instances train = DataSource.read("./data/TrainAndTest/Train.arff");		
 		train.setClassIndex(train.numAttributes() - 1);
 		String[] options = new String[1];
 		options[0] = "-U"; 
 		J48 tree = new J48(); 
 		tree.setOptions(options);
 		tree.buildClassifier(train);		
-		test.persistModel(tree, "F:/KDDCUP1999/test.model");
+		test.persistModel(tree, "./data/Model/test.model");
 	}
 	
 }

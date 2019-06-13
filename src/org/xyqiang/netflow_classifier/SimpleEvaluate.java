@@ -11,9 +11,9 @@ public class SimpleEvaluate {
 	}
 	
 	public String simpleEvalute() throws Exception {
-		Instances train = DataSource.read("F:/KDDCUP1999/Train.arff");
+		Instances train = DataSource.read("./data/TrainandTest/Train.arff");
 		train.setClassIndex(train.numAttributes() - 1);
-		Instances test = DataSource.read("F:/KDDCUP1999/Test.arff");
+		Instances test = DataSource.read("./data/TrainandTest/Test.arff");
 		test.setClassIndex(test.numAttributes() - 1);
 		LoaderTree tree=new LoaderTree();
 		Evaluation eval = new Evaluation(train);
