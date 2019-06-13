@@ -23,7 +23,7 @@ Abnormal Traffic Identification Classifier based on machine learning methods. My
 3. Run MainContainer.java. It is a demo UI used for show the prediction.
 4. Tips: test.txt is some examples from kddcup.newtestdata_10_percent_unlabeled.gz.
 
-##License
+## License
 
 MIT License
 
