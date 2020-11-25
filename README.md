@@ -1,5 +1,7 @@
 # ML-ATIC
-Abnormal Traffic Identification Classifier based on machine learning methods. My code for undergraduate graduation design. There would be many mistakes in codes. Also, it may have some inappropriate methods  in training model and evaluation. Welcome to find it out.
+Abnormal Traffic Identification Classifier based on machine learning methods with the help of [Weka](https://www.cs.waikato.ac.nz/ml/weka/) API. It's my code for undergraduate graduation design. And there would be many mistakes in codes. Anyway, it may have some inappropriate methods in training model and evaluation. 
+
+Welcome to find it out. Any questions, please e-mail me!
 
 ## Requirements
 
